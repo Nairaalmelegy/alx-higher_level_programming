@@ -18,8 +18,10 @@ elif argv[2] == '*':
     func = mul
 elif argv[2] == '/':
     func = div
-else:
-    print("Unknown operator. Available operators: +, -, *, and /")
+
+operator = argv[2]
+if operator not in ('+', '-', '*', '/'):
+    print("Unknown operator. Available operators: +, -, * and /")
     exit(1)
 
 result = func(int(argv[1]), int(argv[3]))

@@ -8,6 +8,7 @@ if i == 0:
     print("{:d} arguments.".format(i))
 elif i > 0:
     if i == 1:
+        print("{:d} argument:".format(i))
         j = 0
         for arg in sys.argv:
             if j != 0:

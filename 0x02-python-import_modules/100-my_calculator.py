@@ -2,27 +2,27 @@
 from sys import argv
 from calculator_1 import add, sub, mul, div
 
-if __name__ != "__main__":
-    exit()
+if __name__ == "__main__":
 
-number = len(argv) - 1
-if number != 3:
-    print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-    exit(1)
+    number = len(argv) - 1
 
-elif argv[2] == '+':
-    func = add
-elif argv[2] == '-':
-    func = sub
-elif argv[2] == '*':
-    func = mul
-elif argv[2] == '/':
-    func = div
+    if number != 3:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
+    elif argv[2] == '+':
+        func = add
+    elif argv[2] == '-':
+        func = sub
+    elif argv[2] == '*':
+        func = mul
+    elif argv[2] == '/':
+        func = div
 
-operator = argv[2]
-if operator not in ('+', '-', '*', '/'):
-    print("Unknown operator. Available operators: +, -, * and /")
-    exit(1)
+    operator = argv[2]
 
-result = func(int(argv[1]), int(argv[3]))
-print("{:d} {:s} {:d} = {:d}".format(int(argv[1]),argv[2], int(argv[3]), result))
+    if operator not in ('+', '-', '*', '/'):
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
+
+    result = func(int(argv[1]), int(argv[3]))
+    print("{:d} {:s} {:d} = {:d}".format(int(argv[1]),argv[2], int(argv[3]), result))

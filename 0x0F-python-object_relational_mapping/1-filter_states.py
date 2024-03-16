@@ -10,6 +10,12 @@ import MySQLdb
 
 
 def main():
+
+    # check arg in command line
+    if len(sys.argv) != 4:
+        print("Usage: {} username password database".format(sys.argv[0]))
+        return
+
     # Get arguments from command line
     username = sys.argv[1]
     password = sys.argv[2]

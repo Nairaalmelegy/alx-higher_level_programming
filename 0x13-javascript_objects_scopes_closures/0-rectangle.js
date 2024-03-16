@@ -1,4 +1,6 @@
 #!/usr/bin/node
-class Rectangle{
+// create empty class `Rectangle` that defines a rectangle
+class Rectangle {
 }
-module.experts = Rectangle;
+
+module.exports = Rectangle;
